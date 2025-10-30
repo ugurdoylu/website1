@@ -75,12 +75,11 @@ body {
 }
 
 .bolum1 {
-    display: flex;
+    display: grid;
     background-color: #d7d7d7;
     text-align: center;
-    padding: 100px;
-    gap: 50px;
-    align-items: flex-end;
+    padding: 100px 20px;
+    gap: 30px;
 }
 
 .kutu {
@@ -91,6 +90,12 @@ body {
     padding: 60px 40px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+.kutu:hover {
+    transform: translateY(-10px);
+    transition: transform 0.5s;
+    background-color: rgb(6, 6, 231);
 }
 
 .kutu button {
@@ -152,6 +157,15 @@ body {
 }
 
 @media (max-width:768px) {
+    
+    .hero {
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
     .hero h1 {
         font-size: 1.5rem;
     }
@@ -162,12 +176,13 @@ body {
 
     .bolum1 {
         flex-direction: column;
-        gap: 20px;
+        gap: 50px;
         align-items: center;
+        justify-items: center;
     }
 
     .bolum1 .kutu {
-        width: 90%;
+        width: 80%;
     }
 
     .header {
@@ -179,3 +194,9 @@ body {
         flex-direction: column;
         text-align: center;
     }
+
+    .nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+}
